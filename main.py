@@ -11,13 +11,20 @@ async def main():
     app.append(
                
       Bot(
-            # SESSION ಲೈನ್ ತೆಗೆದುಬಿಡು
-            WORKERS=config.WORKERS,
+            # SESSION ಮತ್ತು WORKERS ಇಲ್ಲಿ ಇರಬಾರದು
             DB_CHANNEL=config.DB_CHANNEL,
             FSUBS=config.FSUBS,
             BOT_TOKEN=config.BOT_TOKEN,
             ADMINS=config.ADMINS,
-            # ... ಉಳಿದವು ಹಾಗೆಯೇ ಇರಲಿ
+            MESSAGES=config.MESSAGES,
+            AUTO_DEL=config.AUTO_DEL,
+            DB_URI=config.DB_URI,
+            DB_NAME=config.DB_NAME,
+            API_ID=config.API_ID,
+            API_HASH=config.API_HASH,
+            PROTECT=config.PROTECT,
+            DISABLE_BTN=config.DISABLE_BTN
+        )
 
         )
 
