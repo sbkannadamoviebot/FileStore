@@ -1,5 +1,17 @@
-FROM python:3.10
+# 1. ಯಾವ ಸಾಫ್ಟ್‌ವೇರ್ ಬೇಕು ಅಂತ ಹೇಳಿ (Base Image)
+FROM node:18
+
+# 2. ಫೈಲ್‌ಗಳನ್ನು ಎಲ್ಲಿ ಇಡಬೇಕು?
 WORKDIR /app
+
+# 3. ಪ್ಯಾಕೇಜ್ ಫೈಲ್‌ಗಳನ್ನು ಕಾಪಿ ಮಾಡಿ
+COPY package*.json ./
+
+# 4. ಬೇಕಾದ ಲೈಬ್ರರಿಗಳನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ
+RUN npm install
+
+# 5. ನಿನ್ನ ಎಲ್ಲಾ ಕೋಡ್ ಅನ್ನು ಕಾಪಿ ಮಾಡಿ
 COPY . .
-RUN chmod +x start.sh
-CMD ["bash", "start.sh"]
+
+# 6. ಅಪ್ಲಿಕೇಶನ್ ಸ್ಟಾರ್ಟ್ ಮಾಡಲು ಕಮಾಂಡ್
+CMD ["npm", "start"]
