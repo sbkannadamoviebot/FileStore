@@ -9,22 +9,24 @@ async def main():
 
     # Create bot instance using config.py values
     app.append(
-        Bot(
-            SESSION,
-            WORKERS,
-            DB_CHANNEL,
-            FSUBS,
-            BOT_TOKEN,
-            ADMINS,
-            MESSAGES,
-            AUTO_DEL,
-            DB_URI,
-            DB_NAME,
-            API_ID,
-            API_HASH,
-            PROTECT,
-            DISABLE_BTN
+               
+    Bot(
+            SESSION=config.SESSION,
+            WORKERS=config.WORKERS,
+            DB_CHANNEL=config.DB_CHANNEL,
+            FSUBS=config.FSUBS,
+            BOT_TOKEN=config.BOT_TOKEN,
+            ADMINS=config.ADMINS,
+            MESSAGES=config.MESSAGES,
+            AUTO_DEL=config.AUTO_DEL,
+            DB_URI=config.DB_URI,
+            DB_NAME=config.DB_NAME,
+            API_ID=config.API_ID,
+            API_HASH=config.API_HASH,
+            PROTECT=config.PROTECT,
+            DISABLE_BTN=config.DISABLE_BTN
         )
+
     )
 
     await compose(app)
