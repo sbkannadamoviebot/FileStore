@@ -15,7 +15,7 @@ SHORT_TUT = "https://t.me/How_to_Download_7x/26"
 
 # Bot Configuration
 SESSION = "yato"
-TOKEN = os.environ.get("BOT_TOKEN", "8539541437:AAEkTEy4Sk0wJkMKpkKB_sgkSZw8QvlAjtg") # ಇಲ್ಲಿ ಎರಡೂ ಕವರ್ ಆಗುತ್ತೆ
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8539541437:AAEkTEy4Sk0wJkMKpkKB_sgkSZw8QvlAjtg") # ಇಲ್ಲಿ BOT_TOKEN ಅಂತಲೇ ಇರಬೇಕು
 API_ID = int(os.environ.get("API_ID", "36537048"))
 API_HASH = os.environ.get("API_HASH", "9942f97cd0b827b411b65b6194069410")
 
