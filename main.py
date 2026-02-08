@@ -1,4 +1,4 @@
-
+from config import BOT_TOKEN  # ಇಲ್ಲಿ BOT_TOKEN ಅಂತ ಇರಲಿ
 import asyncio
 from bot import Bot, web_app
 from pyrogram import compose
@@ -14,7 +14,7 @@ async def main():
             WORKERS,
             DB_CHANNEL,
             FSUBS,
-            TOKEN,
+            BOT_TOKEN,
             ADMINS,
             MESSAGES,
             AUTO_DEL,
