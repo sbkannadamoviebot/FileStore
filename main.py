@@ -1,14 +1,13 @@
-import config
 import asyncio
 from bot import Bot, web_app
 from pyrogram import compose
-from config import *
+import config
 
 async def main():
     app = []
-
-    # Create bot instance using config.py values
-        app.append(
+    
+    # ಬಾಟ್ ಇನ್ಸ್ಟೆನ್ಸ್ ಕ್ರಿಯೇಟ್ ಮಾಡಲಾಗುತ್ತಿದೆ
+    app.append(
         Bot(
             DB_CHANNEL=config.DB_CHANNEL,
             FSUBS=config.FSUBS,
@@ -22,11 +21,10 @@ async def main():
             API_HASH=config.API_HASH,
             PROTECT=config.PROTECT,
             DISABLE_BTN=config.DISABLE_BTN
-        ) # ಇದು Bot() ನ ಕ್ಲೋಸಿಂಗ್ ಬ್ರಾಕೆಟ್
-    ) # ಇದು app.append( ನ ಕ್ಲೋಸಿಂಗ್ ಬ್ರಾಕೆಟ್
-
+        )
+    )
+    
     await compose(app)
-
 
 async def runner():
     await asyncio.gather(
@@ -34,4 +32,6 @@ async def runner():
         web_app()
     )
 
-asyncio.run(runner())
+if __name__ == "__main__":
+    asyncio.run(runner())
+
