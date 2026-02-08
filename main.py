@@ -4,10 +4,10 @@ from pyrogram import compose
 import config
 
 async def main():
-    app = []
+    app = [] # ಇಲ್ಲಿ 4 ಸ್ಪೇಸ್ ಇದೆ
     
-    # ನಿನ್ನ bot.py ನಲ್ಲಿರೋ ಹೆಸರುಗಳಿಗೆ (db, fsub, token) ಮ್ಯಾಚ್ ಆಗುವಂತೆ ಇಲ್ಲಿ ಬದಲಾಯಿಸಲಾಗಿದೆ
-        app.append(
+    # ಕೆಳಗಿನ ಸಾಲು ಮೇಲಿನ 'app = []' ಗೆ ಸರಿಯಾಗಿ ಸಮನಾಗಿರಬೇಕು
+    app.append(
         Bot(
             session=config.SESSION,
             workers=config.WORKERS,
@@ -21,11 +21,10 @@ async def main():
             db_name=config.DB_NAME,
             api_id=config.API_ID,
             api_hash=config.API_HASH,
-            protect=config.PROTECT,      # ಈ ಲೈನ್ ಸೇರಿಸು
-            disable_btn=config.DISABLE_BTN # ಈ ಲೈನ್ ಕೂಡ ಸೇರಿಸು
+            protect=config.PROTECT,
+            disable_btn=config.DISABLE_BTN
         )
     )
-
     
     await compose(app)
 
