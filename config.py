@@ -5,7 +5,7 @@ from logging.handlers import RotatingFileHandler
 # Bot Configuration
 LOG_FILE_NAME = "bot.log"
 PORT = '5010'
-OWNER_ID = 6497757690
+OWNER_ID = "7087329103"
 
 MSG_EFFECT = 5046509860389126442
 
@@ -15,7 +15,7 @@ SHORT_TUT = "https://t.me/How_to_Download_7x/26"
 
 # Bot Configuration
 SESSION = "yato"
-TOKEN = "8539541437:AAEkTEy4Sk0wJkMKpkKB_sgkSZw8QvlAjtg"
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8539541437:AAEkTEy4Sk0wJkMKpkKB_sgkSZw8QvlAjtg")
 API_ID = int(os.environ.get("API_ID", "36537048"))
 API_HASH = os.environ.get("API_HASH", "9942f97cd0b827b411b65b6194069410")
 
