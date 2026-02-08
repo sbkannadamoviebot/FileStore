@@ -1,4 +1,4 @@
-from config import BOT_TOKEN  # ಇಲ್ಲಿ BOT_TOKEN ಅಂತ ಇರಲಿ
+from config import BOT_TOKEN
 import asyncio
 from bot import Bot, web_app
 from pyrogram import compose
