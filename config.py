@@ -21,8 +21,8 @@ API_HASH = os.environ.get("API_HASH", "9942f97cd0b827b411b65b6194069410")
 
 WORKERS = 5
 
-DB_URI = "mongodb"
-DB_NAME = "yato"
+DB_URI = "mongodb+srv://SBKANNADA:SBKANNADAMOVIEBOT@sbkannada.0qq1qjs.mongodb.net/?appName=SBKANNADA"
+DB_NAME = "SBKANNADA"
 
 FSUBS = [[-1003016571084, True, 10]] # Force Subscription Channels [channel_id, request_enabled, timer_in_minutes]
 # Database Channel (Primary)
