@@ -6,14 +6,14 @@ import config
 async def main():
     app = []
     
-    # ಬಾಟ್ ಇನ್ಸ್ಟೆನ್ಸ್ ಕ್ರಿಯೇಟ್ ಮಾಡಲಾಗುತ್ತಿದೆ
-        app.append(
+    # ನಿನ್ನ bot.py ನಲ್ಲಿರೋ ಹೆಸರುಗಳಿಗೆ (db, fsub, token) ಮ್ಯಾಚ್ ಆಗುವಂತೆ ಇಲ್ಲಿ ಬದಲಾಯಿಸಲಾಗಿದೆ
+    app.append(
         Bot(
             session=config.SESSION,
             workers=config.WORKERS,
-            db=config.DB_CHANNEL,      # ಇಲ್ಲಿ DB_CHANNEL ಬದಲು db ಅಂತ ಇರಬೇಕು
-            fsub=config.FSUBS,         # ಇಲ್ಲಿ FSUBS ಬದಲು fsub ಅಂತ ಇರಬೇಕು
-            token=config.BOT_TOKEN,    # ಇಲ್ಲಿ BOT_TOKEN ಬದಲು token ಅಂತ ಇರಬೇಕು
+            db=config.DB_CHANNEL,      # bot.py ಲೈನ್ 17 ರಲ್ಲಿ 'db' ಅಂತ ಇದೆ
+            fsub=config.FSUBS,         # bot.py ಲೈನ್ 17 ರಲ್ಲಿ 'fsub' ಅಂತ ಇದೆ
+            token=config.BOT_TOKEN,    # bot.py ಲೈನ್ 17 ರಲ್ಲಿ 'token' ಅಂತ ಇದೆ
             admins=config.ADMINS,
             messages=config.MESSAGES,
             auto_del=config.AUTO_DEL,
@@ -23,7 +23,6 @@ async def main():
             api_hash=config.API_HASH
         )
     )
-
     
     await compose(app)
 
