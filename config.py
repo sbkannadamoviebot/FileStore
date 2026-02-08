@@ -15,8 +15,9 @@ SHORT_TUT = "https://t.me/How_to_Download_7x/26"
 # Bot Configuration
 SESSION = "yato"
 TOKEN = "642712"
-API_ID = ""
-API_HASH = ""
+API_ID = int(os.environ.get("API_ID", ""))
+API_HASH = os.environ.get("API_HASH", "")
+
 WORKERS = 5
 
 DB_URI = "mongodb"
