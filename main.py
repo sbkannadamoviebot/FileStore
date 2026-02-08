@@ -8,10 +8,8 @@ async def main():
     app = []
 
     # Create bot instance using config.py values
-    app.append(
-               
-      Bot(
-            # SESSION ಮತ್ತು WORKERS ಇಲ್ಲಿ ಇರಬಾರದು
+        app.append(
+        Bot(
             DB_CHANNEL=config.DB_CHANNEL,
             FSUBS=config.FSUBS,
             BOT_TOKEN=config.BOT_TOKEN,
@@ -24,11 +22,8 @@ async def main():
             API_HASH=config.API_HASH,
             PROTECT=config.PROTECT,
             DISABLE_BTN=config.DISABLE_BTN
-        )
-
-        )
-
-    )
+        ) # ಇದು Bot() ನ ಕ್ಲೋಸಿಂಗ್ ಬ್ರಾಕೆಟ್
+    ) # ಇದು app.append( ನ ಕ್ಲೋಸಿಂಗ್ ಬ್ರಾಕೆಟ್
 
     await compose(app)
 
