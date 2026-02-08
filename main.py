@@ -7,22 +7,23 @@ async def main():
     app = []
     
     # ಬಾಟ್ ಇನ್ಸ್ಟೆನ್ಸ್ ಕ್ರಿಯೇಟ್ ಮಾಡಲಾಗುತ್ತಿದೆ
-    app.append(
+        app.append(
         Bot(
-            DB_CHANNEL=config.DB_CHANNEL,
-            FSUBS=config.FSUBS,
-            BOT_TOKEN=config.BOT_TOKEN,
-            ADMINS=config.ADMINS,
-            MESSAGES=config.MESSAGES,
-            AUTO_DEL=config.AUTO_DEL,
-            DB_URI=config.DB_URI,
-            DB_NAME=config.DB_NAME,
-            API_ID=config.API_ID,
-            API_HASH=config.API_HASH,
-            PROTECT=config.PROTECT,
-            DISABLE_BTN=config.DISABLE_BTN
+            session=config.SESSION,
+            workers=config.WORKERS,
+            db=config.DB_CHANNEL,      # ಇಲ್ಲಿ DB_CHANNEL ಬದಲು db ಅಂತ ಇರಬೇಕು
+            fsub=config.FSUBS,         # ಇಲ್ಲಿ FSUBS ಬದಲು fsub ಅಂತ ಇರಬೇಕು
+            token=config.BOT_TOKEN,    # ಇಲ್ಲಿ BOT_TOKEN ಬದಲು token ಅಂತ ಇರಬೇಕು
+            admins=config.ADMINS,
+            messages=config.MESSAGES,
+            auto_del=config.AUTO_DEL,
+            db_uri=config.DB_URI,
+            db_name=config.DB_NAME,
+            api_id=config.API_ID,
+            api_hash=config.API_HASH
         )
     )
+
     
     await compose(app)
 
