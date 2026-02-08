@@ -15,9 +15,9 @@ SHORT_TUT = "https://t.me/How_to_Download_7x/26"
 
 # Bot Configuration
 SESSION = "yato"
-TOKEN = "642712"
-API_ID = int(os.environ.get("API_ID", ""))
-API_HASH = os.environ.get("API_HASH", "")
+TOKEN = "8539541437:AAEkTEy4Sk0wJkMKpkKB_sgkSZw8QvlAjtg"
+API_ID = int(os.environ.get("API_ID", "36537048"))
+API_HASH = os.environ.get("API_HASH", "9942f97cd0b827b411b65b6194069410")
 
 WORKERS = 5
 
